@@ -17,8 +17,12 @@ class School
 end
 
 def grade(grade)
-    @roster[grade]
-  end
+     roster.detect do |x, y| 
+       if x == grade
+        return y 
+       end 
+     end 
+   end 
 
    def sort
     @roster.each do |key, value|
